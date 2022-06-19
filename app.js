@@ -12,9 +12,13 @@ app.listen(port, (err) => {
 
 //CHECK the NODE ENVIRONMENT, then USE() the Express.Static(). Meaning then GO TO "Build folder"
 if (process.env.NODE_ENV === "production") {
+  console.log("Node Environment1: ", process.env.NODE_ENV); //LOG IT and just continue
   app.use(express.static("build")); //Meaning then GO TO "Build folder"
   //THEN GET the URL Directory of the index.html ("path.resolve()") from the "Build folder". Then show the FILE there (req.sendFile).
   app.get("*", (req, res) => {
     req.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
-}  
+}
+console.log("Node Environment2: ", process.env.NODE_ENV); //LOG IT and just continue
+
+
