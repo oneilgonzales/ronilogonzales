@@ -1,0 +1,83 @@
+header {
+  height: 100vh;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.header__container {
+  /* height: 100%; */
+  position: relative;
+  text-align: center;
+}
+
+/* ===== CTA Call To Actions =========*/
+.cta {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ===== Header Socials =========*/
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  gap: 0.8rem;
+  margin-left: 2rem;
+}
+
+/* making bar "|" line afer a classname USING Pseudo element AFTER*/
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background-color: var(--color-primary);
+}
+
+/*===== ME IMAGE ==========*/
+/* putting image in the MIDDLE by USING calc() 50% minus HALF of the WIDTH of the className */
+.me {
+  position: absolute;
+  width: 22rem;
+  height: 30rem;
+  background: linear-gradient(var(--color-primary), transparent);
+  left: calc(50% - 11rem);
+  margin-top: 2rem;
+  border-radius: 12rem 12rem 0 0;
+}
+
+/*========== SCROLL DOWN*/
+.scroll__down {
+  position: absolute;
+  right: -1rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* Media Queries Medium Device TABLET*/
+@media screen and (max-width: 1024px) {
+  /* change header height size */
+  header {
+    height: 68vh;
+  }
+}
+
+/* Media Queries SMALL Device*/
+@media screen and (max-width: 600px) {
+  /* change header height size */
+  header {
+    height: 100vh;
+  }
+  /*DONT DISPLAY scroll down and header socials fb icons*/
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
