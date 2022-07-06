@@ -12,7 +12,7 @@
 
 :root {
   /* --color-bg: #1f1f38; */
-  --color-bg: rgb(31, 22, 201);
+  --color-bg: rgb(27, 35, 69);
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
@@ -50,7 +50,7 @@ body {
   width: var(--container-width-lg);
   /* height: 100vh; */
   margin: 0 auto;
-  background-color: red;
+  /* background-color: red; for debugging*/
 }
 
 h1,
@@ -85,6 +85,7 @@ section > h2 {
   color: var(--color-light);
 }
 
+/* transition: is the animation for ease out ease in */
 a {
   transition: var(--transition);
 }
@@ -115,6 +116,7 @@ a:hover {
   color: var(--color-bg);
 }
 
+/* default settings on all images object-fit: cover  */
 img {
   display: block;
   width: 100%;
