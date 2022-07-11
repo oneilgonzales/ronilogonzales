@@ -53,6 +53,7 @@ header {
 
 /*========== SCROLL DOWN*/
 .scroll__down {
+  color: var(--color-primary);
   position: absolute;
   right: -1rem;
   bottom: 5rem;
