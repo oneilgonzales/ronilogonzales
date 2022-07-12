@@ -1,115 +1,115 @@
 .about__container {
-  display: grid;
-  grid-template-columns: 35% 50%;
-  gap: 15%;
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
 }
 
 /* NOTE: "width: 100%; and aspect-ratio: 1/1" The Width will always match the Height */
 .about__me {
-  width: 100%;
-  aspect-ratio: 1/1;
-  background: linear-gradient(45deg, var(--color-primary), transparent);
-  border-radius: 1.5rem;
-  /* NOTE: "display: grid and place-items: center" Always Place the Image/Item in the Center*/
-  display: grid;
-  place-items: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(45deg, var(--color-primary), transparent);
+    border-radius: 1.5rem;
+    /* NOTE: "display: grid and place-items: center" Always Place the Image/Item in the Center*/
+    display: grid;
+    place-items: center;
 }
 
 .about__me_img {
-  border-radius: 1.5rem;
-  transform: rotate(10deg);
-  transition: var(--transition);
-  /* overflow specifies what a browser should do, when content is bigger than block dimensions. overflow:hidden means 'hide it and preserve initial block dimensions'.
+    border-radius: 1.5rem;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    /* overflow specifies what a browser should do, when content is bigger than block dimensions. overflow:hidden means 'hide it and preserve initial block dimensions'.
   In Case the Image is Bigger then the Block Dimension
   Note: Here, Without "overflow hidden" the border-radius of this DIV class will not be seen in the image border  */
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .about__me_img:hover {
-  transform: rotate(0);
-  transition: var(--transition);
+    transform: rotate(0);
+    transition: var(--transition);
 }
 
 .about__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .about__card {
-  background: var(--color-bg-variant);
-  /* Why the color of the border is "transparent?" what is the use if it is transparent?
+    background: var(--color-bg-variant);
+    /* Why the color of the border is "transparent?" what is the use if it is transparent?
   Transparent border property beautifies the HTML page by making behind objects distinctly visible. */
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  /* Padding can be used to make the Items center. Same All Padding
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    /* Padding can be used to make the Items center. Same All Padding
   text-align center, Center the contents*/
-  padding: 1.5rem;
-  text-align: center;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .about__card:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  /* Make "cursor default" so that the cursor dont change to line cursor when stop to the "text"  */
-  cursor: default;
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    /* Make "cursor default" so that the cursor dont change to line cursor when stop to the "text"  */
+    cursor: default;
 }
 
 .about__card_icon {
-  color: var(--color-primary);
-  /* NOTE: font-size can be used to change the size of an "icon" */
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+    color: var(--color-primary);
+    /* NOTE: font-size can be used to change the size of an "icon" */
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .about__card h5 {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
 }
 
 .about__card small {
-  font-size: 0.7rem;
-  color: var(--color-light);
+    font-size: 0.7rem;
+    color: var(--color-light);
 }
 
 .about__content p {
-  margin: 1.5rem 0 2.5rem;
-  color: var(--color-light);
+    margin: 1.5rem 0 2.5rem;
+    color: var(--color-light);
 }
 
 /* ======= MEDIA QUERIES (MEDIUM DEVICES like TABLET)*/
 @media screen and (max-width: 1024px) {
-  /* CONTAINER will be ONE column ONLY */
-  .about__container {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  /* Make the Image cover the 50% of the width so that the About_Content will go down below the image because it will overflow*/
-  .about__me {
-    width: 50%;
-    margin: 2rem auto 4rem;
-  }
-  .about__content p {
-    margin: 1rem 0 1.5rem;
-  }
+    /* CONTAINER will be ONE column ONLY */
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    /* Make the Image cover the 50% of the width so that the About_Content will go down below the image because it will overflow*/
+    .about__me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+    .about__content p {
+        margin: 1rem 0 1.5rem;
+    }
 }
 
 /* ======= MEDIA QUERIES (SMALL DEVICES like PHONES)*/
 @media screen and (max-width: 600px) {
-  .about__me {
-    width: 65%;
-    margin: 0 auto 3rem;
-  }
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
 
-  .about__cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 
-  .about__content {
-    text-align: center;
-  }
+    .about__content {
+        text-align: center;
+    }
 
-  .about__content p {
-    margin: 1rem 0;
-  }
+    .about__content p {
+        margin: 1rem 0;
+    }
 }
