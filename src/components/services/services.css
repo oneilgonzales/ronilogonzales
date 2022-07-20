@@ -1,0 +1,71 @@
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Make sure there also a BORDER before hover. So there will be no movement in the display */
+.service {
+    background: var(--color-bg-variant);
+    height: fit-content;
+    border: 1px solid transparent;
+    border-radius: 0 0 2rem 2rem;
+    transition: var(--transition);
+}
+
+/* BestPractice: always make cursor default so that the cursor will not change into linePointer */
+.service:hover {
+    background: transparent;
+    border: 1px solid var(--color-primary-variant);
+    cursor: default;
+}
+
+.service__head {
+    background: var(--color-primary);
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+}
+
+.service__head h3 {
+    color: var(--color-light);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.service__list {
+    padding: 2rem;
+}
+
+.service__list li {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.service__list-icon {
+    margin-top: 2px;
+}
+
+.service__list li p {
+    font-size: small;
+}
+
+/* ======= MEDIA QUERIES (MEDIUM DEVICES like TABLET)*/
+@media screen and (max-width: 1204px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .service {
+        height: auto;
+    }
+}
+
+/* ======= MEDIA QUERIES (MEDIUM DEVICES like PHONES)*/
+@media screen and (max-width: 600px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

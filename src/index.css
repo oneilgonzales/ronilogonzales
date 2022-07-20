@@ -10,6 +10,7 @@
     text-decoration: none;
 }
 
+/* Placed VARIABLES on ROOT */
 :root {
     /* --color-bg: #1f1f38; */
     --color-bg: #1f1f38;
@@ -86,21 +87,27 @@ section > h2 {
     color: var(--color-light);
 }
 
+/* ALL A-tags has transitions */
 /* transition: is the animation for ease out ease in */
 a {
     transition: var(--transition);
 }
 
+/* ALL A-tags has hover color */
 a:hover {
     color: var(--color-white);
 }
 
+/* All components may Use this class for making a button  */
 .btn {
+    /* width is fit content */
     width: max-content;
+    /* inline-block means only COVER the space as bounded by the tags, which is fit content on width  */
     display: inline-block;
     color: var(--color-primary);
     padding: 1rem 1.2rem;
     border-radius: 0.4rem;
+    /* pointer makes the cursor to be HAND icon */
     cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);

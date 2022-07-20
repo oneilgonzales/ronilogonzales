@@ -10,7 +10,7 @@
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
 }
 
 .experience__container > div:hover {
@@ -19,6 +19,7 @@
     transition: var(--transition);
 }
 
+/* font-size: medium; equals 1rem */
 .experience__container > div h3 {
     text-align: center;
     font-size: medium;

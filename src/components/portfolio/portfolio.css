@@ -1,0 +1,48 @@
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.portfolio__item {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.portfolio__item:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+.portfolio__item-image img {
+    border-radius: 1rem;
+}
+
+.portfolio__item h3 {
+    color: var(--color-white);
+    font-size: medium;
+    margin-top: 1rem;
+}
+
+.portfolio__item-cta {
+    margin-top: 1.2rem;
+}
+
+/* MEDIUM SIZE TABLET */
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
