@@ -7,6 +7,52 @@ const Experience = () => {
             <h5>What Skills I Have</h5>
             <h2>My Experience</h2>
             <div className="container experience__container">
+                <div className="experience__mobile-dev">
+                    <h3>Mobile Development</h3>
+                    <div className="experience__content">
+                        <article className="experience__details">
+                            <BsPatchCheckFill className="experience__icon" />
+                            <div>
+                                <h4>Android Java</h4>
+                                <small>Experience</small>
+                            </div>
+                        </article>
+                        <article className="experience__details">
+                            <BsPatchCheckFill className="experience__icon" />
+                            <div>
+                                <h4>Android Kotlin</h4>
+                                <small>Intermediate</small>
+                            </div>
+                        </article>
+                        <article className="experience__details">
+                            <BsPatchCheckFill className="experience__icon" />
+                            <div>
+                                <h4>React Native </h4>
+                                <small>Basic</small>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div className="experience__chatbot-dev">
+                    <h3>Chatbot Development</h3>
+                    <div className="experience__content">
+                        <article className="experience__details">
+                            <BsPatchCheckFill className="experience__icon" />
+                            <div>
+                                <h4>Messenger</h4>
+                                <small>Experience</small>
+                            </div>
+                        </article>
+                        <article className="experience__details">
+                            <BsPatchCheckFill className="experience__icon" />
+                            <div>
+                                <h4>Viber</h4>
+                                <small>Experience</small>
+                            </div>
+                        </article>
+                    </div>
+                </div>
                 <div className="experience__frontend">
                     <h3>Frontend Development</h3>
                     <div className="experience__content">
@@ -61,52 +107,6 @@ const Experience = () => {
                             <BsPatchCheckFill className="experience__icon" />
                             <div>
                                 <h4>MySQL</h4>
-                                <small>Experience</small>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div className="experience__mobile-dev">
-                    <h3>Mobile Development</h3>
-                    <div className="experience__content">
-                        <article className="experience__details">
-                            <BsPatchCheckFill className="experience__icon" />
-                            <div>
-                                <h4>Android Java</h4>
-                                <small>Experience</small>
-                            </div>
-                        </article>
-                        <article className="experience__details">
-                            <BsPatchCheckFill className="experience__icon" />
-                            <div>
-                                <h4>Android Kotlin</h4>
-                                <small>Intermediate</small>
-                            </div>
-                        </article>
-                        <article className="experience__details">
-                            <BsPatchCheckFill className="experience__icon" />
-                            <div>
-                                <h4>React Native </h4>
-                                <small>Basic</small>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div className="experience__chatbot-dev">
-                    <h3>Chatbot Development</h3>
-                    <div className="experience__content">
-                        <article className="experience__details">
-                            <BsPatchCheckFill className="experience__icon" />
-                            <div>
-                                <h4>Messenger</h4>
-                                <small>Experience</small>
-                            </div>
-                        </article>
-                        <article className="experience__details">
-                            <BsPatchCheckFill className="experience__icon" />
-                            <div>
-                                <h4>Viber</h4>
                                 <small>Experience</small>
                             </div>
                         </article>

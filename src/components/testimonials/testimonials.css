@@ -1,0 +1,63 @@
+/* NOTE: making the base container to 40% width and not only the testimonials__container */
+/* NOTE _ NOTICE the DOT, should be no space with child class "testimonials__container " */
+/* NOTICE no diplay settings just on default block of div, for swiper */
+.container.testimonials__container {
+    width: 40%;
+    padding-bottom: 3rem;
+}
+
+.testimonials {
+    background: var(--color-bg-variant);
+    border-radius: 2rem;
+    padding: 2rem;
+    user-select: none;
+    text-align: center;
+    height: fit-content;
+}
+
+/* making a CIRCLE :  overflow: hidden; do the tricks to make the border-radius: 50% effective into image so that no need to make the image radius the same with its parentTag*/
+.client__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    /* put the img tag in the center of this div parent */
+    margin: 0 auto 1rem;
+    /*creating a border in the divTag */
+    border: 0.4rem solid var(--color-primary-variant);
+}
+
+.client__name {
+    color: var(--colo-white);
+}
+
+.client__reviews {
+    width: 80%;
+    color: var(--color-light);
+    font-weight: 300;
+    /* display: block; */
+    margin: 0 auto 0.4rem;
+}
+
+/* Oveerriding the ClassName of SwiperJS From InspectElement of SwiperJs */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background: var(--color-primary);
+}
+
+/* ======= MEDIA QUERIES (MEDIUM DEVICES like TABLET)*/
+@media screen and (max-width: 1024px) {
+    .container.testimonials__container {
+        width: 60%;
+    }
+}
+
+/* ======= MEDIA QUERIES (SMALL DEVICES like PHONES)*/
+@media screen and (max-width: 600px) {
+    .container.testimonials__container {
+        width: var(--container-width-sm);
+    }
+
+    .client__reviews {
+        width: var(--container-width-sm);
+    }
+}

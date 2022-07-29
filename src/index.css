@@ -19,7 +19,6 @@
     --color-primary-variant: rgba(77, 181, 255, 0.4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
-
     --transition: all 400ms ease;
 
     --container-width-lg: 75%;
@@ -38,7 +37,9 @@ html {
 }
 
 /*Poppins from GoogleFont*/
-body {
+body,
+textarea,
+input {
     font-family: "Poppins", sans-serif;
     background: var(--color-bg);
     line-height: 1.7;
