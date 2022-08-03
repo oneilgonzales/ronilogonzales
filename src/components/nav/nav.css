@@ -1,42 +1,42 @@
 nav {
-  background: rgba(0, 0, 0, 0.3);
-  /* max-content is WRAP_CONTENT */
-  width: max-content;
-  display: block;
-  padding: 0.5rem 1rem;
-  /* z-index is for LAYERING: -1=behind, 2..10 onTheTOP */
-  z-index: 2;
-  /* position: fixed is making the ELEMENT FIXED in a certain position */
-  position: fixed;
-  /* left: 50% and transform: translateX(-50%) is making the ELEMENT CENTER in its block (its row) */
-  left: 50%;
-  transform: translateX(-50%);
-  /*bottom: 1rem is like margin in the bottom BECAUSE it is Position FIXED*/
-  bottom: 1rem;
-  display: flex;
-  gap: 0.5rem;
-  border-radius: 3rem;
-  backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.3);
+    /* max-content is WRAP_CONTENT */
+    width: max-content;
+    display: block;
+    padding: 0.5rem 1rem;
+    /* z-index is for LAYERING: -1=behind, 2..10 onTheTOP */
+    z-index: 2;
+    /* position: fixed is making the ELEMENT FIXED in a certain position */
+    position: fixed;
+    /* left: 50% and transform: translateX(-50%) is making the ELEMENT CENTER in its block (its row) */
+    left: 50%;
+    transform: translateX(-50%);
+    /*bottom: 1rem is like margin in the bottom BECAUSE it is Position FIXED*/
+    bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
 }
 
 /*Change A tag style from its default in index.css*/
 nav a {
-  /*Set A tag background TRANSPARENT by default*/
-  background: transparent;
-  padding: 0.3rem 0.5rem 0 0.5rem;
-  border-radius: 50%;
-  color: var(--color-light);
-  /*font-size ??? why there is no text in the A-tag*/
-  font-size: 1rem;
+    /*Set A tag background TRANSPARENT by default*/
+    background: transparent;
+    padding: 0.3rem 0.5rem 0 0.5rem;
+    border-radius: 50%;
+    color: var(--color-light);
+    /*font-size ??? why there is no text in the A-tag*/
+    font-size: 1rem;
 }
 /*Change A tag background when HOVER*/
 nav a:hover {
-  background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /*Change A tag background when ACTIVE*/
 /* a.active means new class,and it is the .active. Note it is not a Pseudo ":" */
 nav a.active {
-  background: var(--color-bg);
-  color: var(--color-white);
+    background: var(--color-primary);
+    color: var(--color-bg);
 }

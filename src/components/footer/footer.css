@@ -1,0 +1,56 @@
+footer {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* NOTE: A tag is INLINE Element, so make it InlineBlock so that the marginBottom will EFFECT */
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-bg);
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.permalink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 2rem;
+}
+
+.permalink a {
+    color: var(--color-bg-variant);
+}
+
+.footer__socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* NOTE:  display: flex; makes the Background fit the content */
+.footer__socials a {
+    display: flex;
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+}
+
+.footer__socials a:hover {
+    background: transparent;
+    border-color: var(--color-bg);
+    color: var(--color-bg);
+}
+
+/* NOTE: small is an INLINE element */
+.footer__copyright {
+    color: var(--color-bg);
+    margin-bottom: 4rem;
+}
