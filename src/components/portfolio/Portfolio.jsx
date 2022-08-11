@@ -7,46 +7,47 @@ import IMG4 from "../../assets/portfolio4.jpg";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
 
-const data = [
-    {
-        id: "1",
-        image: IMG1,
-        title: "Title 1",
-        link: "https://www.google.com",
-    },
-    {
-        id: "2",
-        image: IMG2,
-        title: "Title 2",
-        link: "https://www.yahoo.com",
-    },
-    {
-        id: "3",
-        image: IMG3,
-        title: "Title 3",
-        link: "https://www.facebook.com",
-    },
-    {
-        id: "4",
-        image: IMG4,
-        title: "Title 4",
-        link: "https://www.google.com",
-    },
-    {
-        id: "5",
-        image: IMG5,
-        title: "Title 5",
-        link: "https://www.google.com",
-    },
-    {
-        id: "6",
-        image: IMG6,
-        title: "Title 6",
-        link: "https://www.google.com",
-    },
-];
+// const data = [
+//     {
+//         id: "1",
+//         image: IMG1,
+//         title: "Title 1",
+//         link: "https://www.google.com",
+//     },
+//     {
+//         id: "2",
+//         image: IMG2,
+//         title: "Title 2",
+//         link: "https://www.yahoo.com",
+//     },
+//     {
+//         id: "3",
+//         image: IMG3,
+//         title: "Title 3",
+//         link: "https://www.facebook.com",
+//     },
+//     {
+//         id: "4",
+//         image: IMG4,
+//         title: "Title 4",
+//         link: "https://www.google.com",
+//     },
+//     {
+//         id: "5",
+//         image: IMG5,
+//         title: "Title 5",
+//         link: "https://www.google.com",
+//     },
+//     {
+//         id: "6",
+//         image: IMG6,
+//         title: "Title 6",
+//         link: "https://www.google.com",
+//     },
+// ];
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+    const data = props.portfolio
     return (
         <section id="portfolio">
             <h5>My Recent Work</h5>

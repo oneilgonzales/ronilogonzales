@@ -7,7 +7,7 @@ import { FaViber } from "react-icons/fa";
 
 const Contact = () => {
     //Must be inside ReactFunction
-    // const [values, setValues] = useState([]); // this useState() is an array type, []
+    const [status, setStatus] = useState(false); // this useState() is an array type, []
 
     // const submitHandler = (event) => {
     //     event.preventDefault();
@@ -22,19 +22,21 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        console.log(formRef.current);
-
+        // console.log(formRef.current);
         emailjs
             .sendForm(
-                "service_qrbz1iq", //SERVICE ID
-                "template_ana5p5m", //TEMPLATE ID
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 formRef.current,
-                "AIJ4hDBnng5xYgJJ1" //PUBLIC KEY
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
             )
             .then(
                 (result) => {
-                    console.log(result.text);
+                    // console.log(result.text);
+                    if (result.text == "OK") {
+                        setStatus(true);
+                        delayHandler();
+                    }
                 },
                 (error) => {
                     console.log(error.text);
@@ -42,6 +44,12 @@ const Contact = () => {
             );
 
         e.target.reset(); //RESET the Value of the input and textArea
+    };
+
+    const delayHandler = () => {
+        setTimeout(() => {
+            setStatus(false);
+        }, 2000);
     };
 
     return (
@@ -107,13 +115,18 @@ const Contact = () => {
                         // onChange={onChangeHandler}
                         required
                     ></textarea>
-                    <button
-                        type="submit"
-                        // onClick={submitHandler} //to be detected by FORM TAG "onSubmit" once clicked
-                        className="btn btn-primary"
-                    >
-                        Send Message
-                    </button>
+                    <div className="form-submit">
+                        <button
+                            type="submit"
+                            // onClick={submitHandler} //to be detected by FORM TAG "onSubmit" once clicked
+                            className="btn btn-primary"
+                        >
+                            Send Message
+                        </button>
+                        <h3 className={status ? "sent" : "unsent"}>
+                            Message Sent !
+                        </h3>
+                    </div>
                 </form>
             </div>
         </section>

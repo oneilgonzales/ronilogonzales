@@ -60,6 +60,26 @@ form {
     gap: 1rem;
 }
 
+.form-submit{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.form-submit > h3{ 
+   color: var(--color-primary);
+   font-style: italic;
+   font-weight: 200;
+}
+
+.sent{
+    display: block;
+}
+
+.unsent{
+    display: none;
+}
+
 /* Note: the width: 100% is same as "display: inline-block"
 for both INPUT and TEXTAREA which are inline element*/
 input,
