@@ -77,8 +77,7 @@ app.get("/portfolio", (req, res) => {
 
 app.get("/resume", (req, res) => {
     // //Start the QUERY
-    const query =
-        "SELECT link FROM download WHERE user_id = 1 AND file_id = 1";
+    const query = "SELECT link FROM download WHERE user_id = 1 AND file_id = 1";
     //SQL QUERY conn.query( query,function());
     conn.query(query, (err, result, fields) => {
         if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR
@@ -88,8 +87,7 @@ app.get("/resume", (req, res) => {
 
 app.get("/experience_title", (req, res) => {
     // //Start the QUERY
-    const query =
-        "SELECT id, name as title FROM dev_skills";
+    const query = "SELECT id, name as title FROM dev_skills";
     //SQL QUERY conn.query( query,function());
     conn.query(query, (err, result, fields) => {
         if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR
@@ -100,12 +98,36 @@ app.get("/experience_title", (req, res) => {
 app.get("/experience_skills", (req, res) => {
     // //Start the QUERY
     const query =
-        "SELECT dev_skills_id as sid, name, gauge FROM experience";
+        "SELECT dev_skills_id as sid, name, gauge FROM portfolio_experience";
     //SQL QUERY conn.query( query,function());
     conn.query(query, (err, result, fields) => {
         if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR
         else res.send(result); //Send the RESULT
     });
 });
+
+app.get("/about", (req, res) => {
+    // //Start the QUERY
+    const query =
+        "SELECT experience, project, description FROM portfolio_about";
+    //SQL QUERY conn.query( query,function());
+    conn.query(query, (err, result, fields) => {
+        if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR
+        else res.send(result); //Send the RESULT
+    });
+});
+
+app.get("/header", (req, res) => {
+    // //Start the QUERY
+    const query =
+        "SELECT h.linkedIn, h.fb, h.ig, h.image, d.link FROM portfolio_header as h LEFT JOIN download as d ON d.user_id = h.user_id WHERE h.user_id = '1' AND d.file_id = '1'";
+    //SQL QUERY conn.query( query,function());
+    conn.query(query, (err, result, fields) => {
+        if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR
+        else res.send(result); //Send the RESULT
+    });
+});
+
+//
 
 /** ENDPOINTS End*/

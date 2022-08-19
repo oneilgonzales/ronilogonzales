@@ -13,16 +13,16 @@ const Experience = (props) => {
             <div className="container experience__container">
                 {data.map(({ id, title }) => {
                     return (
-                        <div className="experience__mobile-dev">
-                            <h3 key={id}>{title}</h3>
+                        <div className="experience__mobile-dev" key={id}>
+                            <h3>{title}</h3>
                             <div className="experience__content">
-                                {data2.map(({ sid, name, gauge }) => {
+                                {data2.map(({ sid, name, gauge },index) => {
                                     {
                                         // DIFFERENT VALUE for EACH TITLE
                                         if (sid == id) {
                                             return (
                                                 <article
-                                                    key={sid}
+                                                    key={index}
                                                     className="experience__details"
                                                 >
                                                     <BsPatchCheckFill className="experience__icon" />

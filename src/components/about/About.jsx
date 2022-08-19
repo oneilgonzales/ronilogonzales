@@ -4,7 +4,9 @@ import ME from "../../assets/me-about.jpg";
 import { FaAward, FaUserFriends } from "react-icons/fa";
 import { VscNewFolder } from "react-icons/vsc";
 
-const About = () => {
+const About = (props) => {
+    const data = props.about;
+
     return (
         <section id="about">
             <h5>Get To Know</h5>
@@ -20,23 +22,15 @@ const About = () => {
                         <article className="about__card">
                             <FaAward className="about__card_icon" />
                             <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <small>{data["experience"]}</small>
                         </article>
                         <article className="about__card">
                             <VscNewFolder className="about__card_icon" />
                             <h5>Projects</h5>
-                            <small>20+ Completed</small>
+                            <small>{data["project"]}</small>
                         </article>
                     </div>
-                    <p>
-                        I have years of experience and a successful track record
-                        in the software and app development industries as an
-                        Android mobile developer and chatbot developer. Among my
-                        specialties and skill sets are Java, Kotlin, PHP,
-                        ReactJS, React Native, HTML, CSS, JavaScript, NodeJS,
-                        CodeIgniter, Firebase, MySQL, MariaDB and NLP (Natural
-                        Language Processing).
-                    </p>
+                    <p>{data["description"]}</p>
                     <a href="#contact" className="btn btn-primary">
                         Let's Talk
                     </a>

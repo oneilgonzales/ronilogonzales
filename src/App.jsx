@@ -24,16 +24,19 @@ const baseUrlServer = process.env.REACT_APP_BASE_URL_DEV_SERVER;
 const App = () => {
     /** UseState must called first before useEffect */
     const [portfolioData, setPortfolio] = useState([]); //array
-    const [resumeData, setResume] = useState(""); //String
+    // const [resumeData, setResume] = useState(""); //String
     const [experienceTitleData, setExperienceTitle] = useState([]); //array
     const [experienceSkillsData, setExperienceSkills] = useState([]); //array
-
+    const [aboutData, setAbout] = useState([]); //array
+    const [headerData, setHeader] = useState([]); //array
 
     useEffect(() => {
-        // getPortfolio();
+        getHeader();
+        getPortfolio();
         // getResume();
-        // getExperienceTitle();
-        // getExperienceSkills();
+        getExperienceTitle();
+        getExperienceSkills();
+        getAbout();
     }, []); //NoNeed DependencyHere so that useEffect will not be CALLED repeatedly
 
     //Axios GET and POST
@@ -48,17 +51,17 @@ const App = () => {
             .catch((err) => console.log(err));
     }
 
-    function getResume() {
-        Axios.get(`${baseUrlServer}/resume`)
-            .then((res) => {
-                if (res.data.length > 0) {
-                    // console.log("LINK: " + res.data[0]["link"]);
-                    setResume(res.data[0]["link"]); //Getting specific element value
-                    return;
-                }
-            })
-            .catch((err) => console.log(err));
-    }
+    // function getResume() {
+    //     Axios.get(`${baseUrlServer}/resume`)
+    //         .then((res) => {
+    //             if (res.data.length > 0) {
+    //                 // console.log("LINK: " + res.data[0]["link"]);
+    //                 setResume(res.data[0]["link"]); //Getting specific element value
+    //                 return;
+    //             }
+    //         })
+    //         .catch((err) => console.log(err));
+    // }
 
     function getExperienceTitle() {
         Axios.get(`${baseUrlServer}/experience_title`)
@@ -82,12 +85,37 @@ const App = () => {
             .catch((err) => console.log(err));
     }
 
+    function getAbout() {
+        Axios.get(`${baseUrlServer}/about`)
+            .then((res) => {
+                if (res.data.length > 0) {
+                    setAbout(res.data[0]); //Getting specific element value
+                    return;
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function getHeader() {
+        Axios.get(`${baseUrlServer}/header`)
+            .then((res) => {
+                if (res.data.length > 0) {
+                    setHeader(res.data[0]); //Getting specific element value
+                    return;
+                }
+            })
+            .catch((err) => console.log(err));
+    }
+
     return (
         <>
-            <Header resume={resumeData} />
+            <Header header={headerData} />
             <Nav />
-            <About />
-            <Experience experienceTitle={experienceTitleData}  experienceSkills={experienceSkillsData}/>
+            <About about={aboutData} />
+            <Experience
+                experienceTitle={experienceTitleData}
+                experienceSkills={experienceSkillsData}
+            />
             {/* <Services /> */}
             <Portfolio portfolio={portfolioData} />
             {/* <Testimonials /> */}
