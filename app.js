@@ -109,7 +109,7 @@ app.get("/experience_skills", (req, res) => {
 app.get("/about", (req, res) => {
     // //Start the QUERY
     const query =
-        "SELECT experience, project, description FROM portfolio_about";
+        "SELECT experience, project, description, image FROM portfolio_about";
     //SQL QUERY conn.query( query,function());
     conn.query(query, (err, result, fields) => {
         if (err) console.log(`DB Query Error: ${err}`); //Just LOG ERROR

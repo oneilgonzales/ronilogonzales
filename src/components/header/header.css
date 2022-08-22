@@ -41,14 +41,25 @@ header {
 
 /*===== ME IMAGE ==========*/
 /* putting image in the MIDDLE by USING calc() 50% minus HALF of the WIDTH of the className */
-.me {
+/* .me {
   position: absolute;
   width: 22rem;
-  height: 30rem;
+  height: 35rem;
   background: linear-gradient(var(--color-primary), transparent);
   left: calc(50% - 11rem);
   margin-top: 2rem;
   border-radius: 12rem 12rem 0 0;
+} */
+
+.me img{
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  background: linear-gradient(var(--color-primary), transparent);
+  left: calc(50% - 12rem);
+  margin-top: 2rem;
+  border-radius: 2rem;
+  /* border-radius: 12rem 12rem 0 0; */
 }
 
 /*========== SCROLL DOWN*/
@@ -56,7 +67,7 @@ header {
   color: var(--color-primary);
   position: absolute;
   right: -1rem;
-  bottom: 5rem;
+  bottom: 7rem;
   transform: rotate(90deg);
   font-weight: 300;
   font-size: 0.9rem;
